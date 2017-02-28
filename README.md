@@ -1,4 +1,4 @@
-# Timer App in Vanilla JavaScript
+# TDD-ready Vanilla JavaScript Boilerplate
 
 App demonstrating ...
 
@@ -14,6 +14,8 @@ Live version: https://REPO.herokuapp.com
 * Vanilla JavaScript
 * ES6
 * Flexbox
+* QUnit
+* Travis CI
 
 ## Getting started
 
