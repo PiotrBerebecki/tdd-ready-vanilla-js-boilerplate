@@ -1,4 +1,4 @@
-# Vanilla JavaScript App Boilerplate
+# Timer App in Vanilla JavaScript
 
 App demonstrating ...
 
