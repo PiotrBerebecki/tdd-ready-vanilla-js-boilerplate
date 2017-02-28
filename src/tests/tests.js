@@ -1,25 +1,93 @@
 /*eslint no-undef: 0*/
 
-/* The code block below ONLY Applies to Node.js - This Demonstrates
-   re-useability of JS code in both Back-end and Front-end! #isomorphic */
-/* istanbul ignore if */
-if (typeof module !== 'undefined' && module.exports) {
-  var QUnit = require('qunitjs'); // require QUnit node.js module
-  // alias the QUnit.test method so we don't have to change all our tests
-  var test = QUnit.test; // stores a copy of QUnit.test
-  require('qunit-tap')(QUnit, console.log); // use console.log for test output
-  var timer = require('../../public/assets/js/app.js'); // load our getChange method
-}
+
+
+// test('assert.equal - Function addOne should add 1', function(assert) {
+//   assert.equal(addOne(1), 2);
+// });
+
+
+// FAILING TEST
+// test('assert.equal - Function addOneAsync should add 1 asynchronously', function(assert) {
+//   assert.equal(addOneAsync(1), 2);
+// });
+
+
+// test('assert.async - Function addOneAsyncWithCallback should add 1 asynchronously', function(assert) {
+//   var done = assert.async();
+//
+//   addOneAsyncWithCallback(1, function(err, res) {
+//     assert.equal(res, 2);
+//     done();
+//   });
+// });
+
+
+// FAILING TEST
+// assert.equal cannot be used on arrays or objects
+// test('assert.equal - Function addOneToEveryElement should add 1', function(assert) {
+//   var arr = [1, 2, 3];
+//   var ans = [2, 3, 4];
+//
+//   assert.equal(addOneToEveryElement(arr), ans);
+// });
+
+
+// assert.deepEqual can be used on arrays or objects
+// test('assert.deepEqual - Function addOneToEveryElement should add 1', function(assert) {
+//   var arr = [1, 2, 3];
+//   var ans = [2, 3, 4];
+//
+//   assert.deepEqual(addOneToEveryElement(arr), ans);
+// });
+
+
+// assert.ok performs a boolean check
+// test('assert.ok - Function isAboveTen works', function(assert) {
+//   assert.ok(isAboveTen(11));
+// });
+
+
+// assert.deepEqual can be used on arrays or objects
+// test('assert.deepEqual - Function changeUsername works', function(assert) {
+//   var user = {
+//     username: 'Bella'
+//   };
+//
+//   var updatedUser = {
+//     username: 'Milo'
+//   };
+//
+//   assert.deepEqual(changeUsername(user, 'Milo'), updatedUser);
+// });
 
 
 
+// FAILING TEST
+// assert.deepEqual cannot be used to compare two objects made with different constructors or prototypes
+// test('assert.deepEqual - This test fails for objects', function(assert) {
+//   function User(name) {
+//     this.username = name;
+//   }
+//
+//   var user1 = new User('Bella');
+//
+//   var user2 = { username: 'Bella' };
+//
+//   assert.deepEqual(user1, user2);
+// });
 
-test('It should return return 2', function(assert) {
-  assert.equal(timer(), 2); // just so we know everything loaded ok
-});
 
 
-
-
-/* istanbul ignore next */
-if (typeof module !== 'undefined' && module.exports) { QUnit.load(); } // run the tests
+// assert.propEqual can be used to compare two objects made with different constructors or prototypes
+// test('assert.deepEqual - This test fails for objects', function(assert) {
+//   function User(name) {
+//     this.username = name;
+//   }
+//
+//   var user1 = new User('Bella');
+//
+//   var user2 = { username: 'Bella' };
+//
+//   assert.propEqual(user1, user2);
+// });
